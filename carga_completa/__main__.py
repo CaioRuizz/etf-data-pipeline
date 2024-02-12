@@ -1,3 +1,3 @@
-from .download import baixar_tudo
+from .download import download_b3_pregoes
 
-baixar_tudo(range(1986, 2025))
+download_b3_pregoes(range(1986, 2025))

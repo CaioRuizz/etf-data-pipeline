@@ -5,14 +5,13 @@ import os
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, trim, substring, to_date, split
-spark = SparkSession.builder.getOrCreate()
 
 
 def encontra_arquivo_mais_recente(diretorio):
     arquivos = [f for f in os.listdir(diretorio) if os.path.isfile(os.path.join(diretorio, f))]
 
     if not arquivos:
-        print("O diretÃ³rio estÃ¡ vazio.")
+        print("O diretório está vazio.")
         return None
 
     # ObtÃ©m a data de modificaÃ§Ã£o de cada arquivo
@@ -32,7 +31,9 @@ base_path = os.path.abspath(os.path.dirname(__file__))
 base_url = 'https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_A{ano}.ZIP'
 
 
-def baixar_tudo(anos: range):
+def download_b3_pregoes(anos: range):
+    spark = SparkSession.builder.getOrCreate()
+
     for ano in anos:
         print(f'ETL ano {ano}')
 
@@ -106,7 +107,9 @@ def baixar_tudo(anos: range):
 
         print('Gravando arquivo formatado')
 
-        df.write.mode('overwrite').parquet(f'./raw/{ano}')
+        print(f'Ano {ano}: {df.count()} registros')
+
+        df.write.mode('overwrite').parquet(f'./bronze/negociacao/Ano={ano}')
 
         print('Excluindo arquivo cru')
 
