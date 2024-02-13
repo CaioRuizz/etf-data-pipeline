@@ -109,7 +109,7 @@ def download_b3_pregoes(anos: range):
 
         print(f'Ano {ano}: {df.count()} registros')
 
-        df.write.mode('overwrite').parquet(f'./bronze/negociacao/Ano={ano}')
+        df.write.mode('overwrite').parquet(f'./files/bronze/negociacao/Ano={ano}')
 
         print('Excluindo arquivo cru')
 

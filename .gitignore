@@ -2,8 +2,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,spark,pycharm
 
 ### Data Files ###
-bronze/**/
-silver/**/
+files/bronze/**/
+files/silver/**/
 gold/**/
 
 ### PyCharm ###
