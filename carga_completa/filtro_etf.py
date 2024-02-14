@@ -25,4 +25,4 @@ def bronze_para_silver():
                  'QuantidadeNegociada',
                  ])
 
-    negocicacao_silver.write.mode('overwrite').partitionBy('CodNeg').parquet('./files/silver/negociacao')
+    negocicacao_silver.write.mode('overwrite').partitionBy('CodNeg').parquet('./files/silver/negociacao_etf')

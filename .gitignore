@@ -4,7 +4,7 @@
 ### Data Files ###
 files/bronze/**/
 files/silver/**/
-gold/**/
+files/gold/**/
 
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider

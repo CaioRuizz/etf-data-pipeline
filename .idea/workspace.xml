@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce2ab6c7-ccb2-44db-a9fe-db32b326e1dc" name="Changes" comment="Camada Silver">
-      <change afterPath="$PROJECT_DIR$/files/silver/.gitkeep" afterDir="false" />
+    <list default="true" id="ce2ab6c7-ccb2-44db-a9fe-db32b326e1dc" name="Changes" comment="Download Files pipeline">
+      <change afterPath="$PROJECT_DIR$/notebooks/rascunho_gold_etf_fechamento.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/carga_completa.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bronze/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/carga_incremental.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carga_completa/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/carga_completa/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carga_completa/filtro.py" beforeDir="false" afterPath="$PROJECT_DIR$/carga_completa/filtro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/silver/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/files/bronze/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carga_completa/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/carga_completa/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carga_completa/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/carga_completa/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carga_completa/filtro.py" beforeDir="false" afterPath="$PROJECT_DIR$/carga_completa/filtro_etf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/executa_carga_completa.py" beforeDir="false" afterPath="$PROJECT_DIR$/executa_carga_completa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/silver/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/carga_completa/seleciona_colunas_etfs_precos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/rascunho_bronze_to_silver.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/rascunho_bronze_to_silver.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,21 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.download.executor": "Run",
-    "Python.executa_carga_completa.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.download.executor&quot;: &quot;Run&quot;,
+    &quot;Python.executa_carga_completa.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/files" />
@@ -115,6 +116,7 @@
       <workItem from="1707625624059" duration="1450000" />
       <workItem from="1707628538643" duration="1274000" />
       <workItem from="1707767552833" duration="10945000" />
+      <workItem from="1707948474663" duration="2653000" />
     </task>
     <task id="LOCAL-00001" summary="Camada Silver">
       <option name="closed" value="true" />
@@ -146,7 +148,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Camada Silver" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/etf_data_pipeline$executa_carga_completa.coverage" NAME="executa_carga_completa Coverage Results" MODIFIED="1707950398192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/etf_data_pipeline$download.coverage" NAME="download Coverage Results" MODIFIED="1707621407182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/carga_completa" />
-    <SUITE FILE_PATH="coverage/etf_data_pipeline$executa_carga_completa.coverage" NAME="executa_carga_completa Coverage Results" MODIFIED="1707790182011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

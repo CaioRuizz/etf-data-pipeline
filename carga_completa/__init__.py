@@ -1,2 +1,3 @@
 from .download import download_b3_pregoes
-from .filtro import bronze_para_silver
+from .filtro_etf import bronze_para_silver
+from .seleciona_colunas_etfs_precos import seleciona_colunas_etf_precos
