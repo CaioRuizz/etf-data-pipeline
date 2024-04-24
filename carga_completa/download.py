@@ -3,11 +3,13 @@ import zipfile
 import io
 import os
 
+from typing import Union
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, trim, substring, to_date, split
 
 
-def encontra_arquivo_mais_recente(diretorio):
+def encontra_arquivo_mais_recente(diretorio: str) -> Union[str, None]:
     arquivos = [f for f in os.listdir(diretorio) if os.path.isfile(os.path.join(diretorio, f))]
 
     if not arquivos:
@@ -32,7 +34,7 @@ base_url = 'https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_A{ano}.ZIP
 
 
 def download_b3_pregoes(anos: range):
-    spark = SparkSession.builder.getOrCreate()
+    spark = SparkSession.Builder().getOrCreate()
 
     for ano in anos:
         print(f'ETL ano {ano}')
@@ -48,6 +50,9 @@ def download_b3_pregoes(anos: range):
         print('Formatando arquivo')
 
         arquivo_cru = encontra_arquivo_mais_recente(base_path)
+
+        if arquivo_cru is None:
+            continue
 
         df = spark.read.text(arquivo_cru)
 
